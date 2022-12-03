@@ -22,6 +22,7 @@ collections:
     folder: hero-story
     create: true
     fields:
+      - { name: title, label: Title }
       - { name: order, label: Order, widget: number, value_type: "int", min: 1 }
       - { name: "description", label: "Description", widget: "text"}
       - { name: body, label: Body, widget: markdown }

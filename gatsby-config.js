@@ -6,14 +6,22 @@ module.exports = {
     title: `telltale`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-emotion", "gatsby-plugin-netlify-cms", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  plugins: ["gatsby-transformer-remark", "gatsby-plugin-emotion", "gatsby-plugin-netlify-cms", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
-      "path": "./src/images/"
+      "path": `${__dirname}/src/images`
     },
     __key: "images"
   },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "images",
+        "path": `${__dirname}/hero-story`
+      },
+      __key: "hero-story"
+    },
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
