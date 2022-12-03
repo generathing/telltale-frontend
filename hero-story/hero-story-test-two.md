@@ -2,7 +2,7 @@
 title: Hero story test two
 order: 2
 description: Mila Goes to the Moon
-thumbnail: /assets/dall·e-2022-12-01-20.37.38-kids-in-the-woods-with-a-red-squirrel-a-giant-shiny-mushroom-kids-book-illustration-style..png
+thumbnail: /assets/dall·e-2022-12-03-15.38.47-a-kid-astronaut-floating-in-space-with-a-teddy-bear-oil-painting.png
 ---
 Once upon a time, there was a young girl named Mila who had a dream of going to the moon. She was inspired by the stories she heard at school about the great lunar explorers.
 
