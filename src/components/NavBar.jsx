@@ -52,7 +52,7 @@ const navItems =
 export default function NavBar() {
     return (
         <NavBarWrapper>
-            <a href="/"><Logo>TailorTales</Logo></a>
+            <a href="/"><Logo>TailorTales.ai</Logo></a>
             <NavItemsWrapper>
                 {navItems.map((item) => {
                     return (
