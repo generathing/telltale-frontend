@@ -17,10 +17,17 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "images",
+        "name": "hero",
         "path": `${__dirname}/hero-story`
       },
       __key: "hero-story"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "assets",
+        "path": `${__dirname}/static/assets`
+      },
     },
     {
       resolve: `gatsby-omni-font-loader`,
