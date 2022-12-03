@@ -21,8 +21,12 @@ module.exports = {
         preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
         web: [
           {
-            name: `Philosopher`,
-            file: `https://fonts.googleapis.com/css2?family=Philosopher&display=swap`,
+            name: `Poppins`,
+            file: `https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap`,
+          },
+          {
+            name: `Abril Fatface`,
+            file: `https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap`,
           },
         ],
       },
