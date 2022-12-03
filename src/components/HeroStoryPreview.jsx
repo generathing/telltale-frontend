@@ -26,16 +26,15 @@ export default function HeroStoryPreview() {
     const nodes = data.allFile.edges
     console.log(nodes)
     const listItems = nodes.map((node) => {
-        const str = "../../static" + node.node.childrenMarkdownRemark[0].frontmatter.thumbnail
-        console.log("../../static" + node.node.childrenMarkdownRemark[0].frontmatter.thumbnail)
+        console.log(node.node.childrenMarkdownRemark[0].frontmatter.thumbnail)
         return (
-            <StaticImage src={str} alt="A dinosaur" />
+            <StaticImage src="" alt="A dinosaur" />
         )
 
     }
 
     );
     return (
-        <div>{listItems}</div>
+        <div>{ }</div>
     )
 }
