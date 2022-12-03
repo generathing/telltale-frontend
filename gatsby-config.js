@@ -6,7 +6,7 @@ module.exports = {
     title: `telltale`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-transformer-remark", "gatsby-plugin-emotion", "gatsby-plugin-netlify-cms", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  plugins: ["gatsby-plugin-emotion", "gatsby-plugin-netlify-cms", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
@@ -38,5 +38,22 @@ module.exports = {
           },
         ],
       },
-    },]
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
+    },
+  ]
 };
