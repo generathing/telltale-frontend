@@ -1,5 +1,5 @@
 ---
-title: Hero story text one
+title: Hero story test one
 order: 1
 description: Mila and the Endless Garden
 thumbnail: /assets/dall·e-2022-12-01-20.37.38-kids-in-the-woods-with-a-red-squirrel-a-giant-shiny-mushroom-kids-book-illustration-style..png
