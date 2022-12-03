@@ -34,7 +34,7 @@ const NavItem = styled("span")`
     
     }
     font-family: 'Poppins', sans-serif;
-    font-size: 19px;
+    font-size: 1rem;
     color: black;
     padding-right: 50px;
 
