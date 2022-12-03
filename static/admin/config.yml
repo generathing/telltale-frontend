@@ -4,6 +4,7 @@ backend:
   branch: main
 
 media_folder: static/assets
+public_folder: /assets
 
 collections:
   - name: blog
@@ -26,5 +27,3 @@ collections:
       - { name: "description", label: "Description", widget: "text"}
       - { name: body, label: Body, widget: markdown }
       - { name: "thumbnail", label: "Featured Image", widget: "image"}
-      - { label: "Relative Path", name: "relpath", widget: "hidden", default: "../../static" }
-
