@@ -20,6 +20,7 @@
 html,
 body {
   height: 100%;
+  font-family: 'Poppins', sans-serif;
 }
 
 /*
@@ -86,4 +87,12 @@ h4 {
 a {
   all: unset;
   cursor: pointer;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4 {
+  padding: 0 1.5rem;
 }

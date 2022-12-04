@@ -10,30 +10,35 @@ const Wrapper = styled("div")`
     overflow: auto;
     padding-bottom: 1rem;
     padding-right: 1rem;
-    padding-left: .5rem;
+    padding-left: 1.5rem;
     margin-top: 2rem;
+`
 
-    img {
-        display: grid;
-        place-content: center;
-        min-width: 80vw;
-        border-radius: 20px;
-        border: 3px solid black;
+const Column = styled("div")`
+    display: grid;
+    place-content: center;
+    min-width: 80vw;
+    border-radius: 20px;
+    border: 2px solid black;
+    overflow: hidden;
+    background-color: #FEF8EA;
+
+    &:first-child {
+        margin-right: 1rem;
     }
 `
+
 const TextContainer = styled("div")`
-    background-color: #FEF8EA;
-    border-radius: 20px;
-    padding: 15px;
-    max-height: 10rem;
+    max-height: 40vh;
+    max-height: 290px;
     overflow: hidden;
-    margin-top: 1rem;
     position: relative;
 
     p {
         font-family: 'Poppins', sans-serif;
         font-size: 1rem;
         white-space: pre-line;
+        padding: 0 15px;
     }
 `
 const TextOverlay = styled("div")`
@@ -48,7 +53,6 @@ const TextOverlay = styled("div")`
 `
 const HeroBlock = styled("div")`
     display: flex;
-    flex-direction: column;
 `
 
 export default function HeroStoryPreview() {
@@ -77,17 +81,20 @@ export default function HeroStoryPreview() {
 
     const nodes = data.allFile.edges
     console.log(nodes)
-    const listItems = nodes.map((node) => {
+    const listItems = nodes.map((node, index) => {
         const frontmatter = node.node.childrenMarkdownRemark[0].frontmatter;
         const content = node.node.childrenMarkdownRemark[0].internal.content;
-        console.log(content)
         return (
             <HeroBlock>
-                <img src={frontmatter.thumbnail} alt={frontmatter.title} />
-                <TextContainer>
-                    <p>{`${content}`}</p>
-                    <TextOverlay />
-                </TextContainer>
+                <Column>
+                    <img src={frontmatter.thumbnail} alt={frontmatter.title} />
+                </Column>
+                <Column>
+                    <TextContainer>
+                        <p>{`${content}`}</p>
+                        <TextOverlay />
+                    </TextContainer>
+                </Column>
             </HeroBlock>
         )
 

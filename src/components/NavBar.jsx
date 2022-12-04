@@ -5,13 +5,13 @@ const Logo = styled("span")`
     font-family: "Abril Fatface", serif;
     font-size: 35px;
     color: black;
+    padding-left: 1rem;
 `;
 
 const NavBarWrapper = styled("div")`
     width: 100%;
     height: 100px;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     background: white;
     position: fixed;
