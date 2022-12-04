@@ -5,7 +5,7 @@ import DoubleCta from "../components/DoubleCta";
 import styled from "@emotion/styled";
 
 const Heading = styled("h1")`
-  padding-top: 5rem;
+  padding-top: 7rem;
   padding-bottom: 1rem;
   font-family: 'Poppins', sans-serif;
 `

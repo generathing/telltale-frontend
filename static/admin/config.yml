@@ -27,3 +27,14 @@ collections:
       - { name: "description", label: "Description", widget: "text"}
       - { name: body, label: Body, widget: markdown }
       - { name: "thumbnail", label: "Featured Image", widget: "image"}
+
+  - name: steps
+    label: Steps
+    folder: steps
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: order, label: Order, widget: number, value_type: "int", min: 1 }
+      - { name: "description", label: "Description", widget: "text"}
+      - { name: body, label: Body, widget: markdown }
+      - { name: "thumbnail", label: "Featured Image", widget: "image", required: false }
