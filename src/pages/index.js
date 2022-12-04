@@ -5,12 +5,13 @@ import DoubleCta from "../components/DoubleCta";
 import styled from "@emotion/styled";
 
 const Heading = styled("h1")`
-  padding-top: 8rem;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
   font-family: 'Poppins', sans-serif;
 `
 const SecondaryHeading = styled("h2")`
   font-family: 'Poppins', sans-serif;
-  margin: 1rem 0 1.5rem 0;
+  margin: 1.5rem 0 2rem 0;
 `
 const FeaturesList = styled("ul")`
   list-style: none;

@@ -3,17 +3,17 @@ import styled from "@emotion/styled";
 
 const Logo = styled("span")`
     font-family: "Abril Fatface", serif;
-    font-size: 35px;
+    font-size: 1.5rem;
     color: black;
     padding-left: 1rem;
 `;
 
 const NavBarWrapper = styled("div")`
     width: 100%;
-    height: 100px;
+    height: 60px;
     display: flex;
     align-items: center;
-    background: white;
+    background: #FEF8EA;
     position: fixed;
     top: 0;
     left: 0;
