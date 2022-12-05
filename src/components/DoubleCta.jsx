@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "@emotion/styled";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase/config"
+import { Link } from "gatsby"
 
 const Wrapper = styled("div")`
     display: flex;
@@ -15,8 +16,8 @@ const Wrapper = styled("div")`
 
 const MainCta = styled("button")`
     display: inline-block;
-    border: none;
-    padding: 1rem 5rem;
+    border: 3px solid black;
+    padding: 1rem 4rem;
     margin: 0;
     text-decoration: none;
     border-radius: 15px;
@@ -26,23 +27,24 @@ const MainCta = styled("button")`
     line-height: 1;
     cursor: pointer;
     text-align: center;
-    transition: background 250ms ease-in-out, transform 150ms ease, color 100ms ease-in-out;
+    transition: background 250ms ease-in-out, transform 200ms ease, color 100ms ease-in-out;
     -webkit-appearance: none;
     -moz-appearance: none;
 
     &:hover,
     &:focus {
-        background: #FEF8EA;
+        background: transparent;
         color: black;
+        transform: scale(1.2);
     }
 
     &:focus {
-        outline: 1px solid #fff;
         outline-offset: -4px;
     }
 
     &:active {
-        transform: scale(0.99);
+        background: transparent;
+        transform: scale(0.9);
     }  
 `
 
@@ -55,21 +57,21 @@ const SecondaryCta = styled("a")`
 
 
 export default function DoubleCta({ mainCta, secondaryCta, showSecondary = true }) {
-    const testFirebase = () => {
+    // const testFirebase = () => {
 
-        addDoc(collection(db, "test-form-submission"), {
-            stringField: "This is another test"
-        })
-            .then(() => {
-                alert('Message submitted 👍');
-            })
-            .catch((error) => {
-                alert(error.message);
-            });
-    };
+    //     addDoc(collection(db, "test-form-submission"), {
+    //         stringField: "This is anothertest"
+    //     })
+    //         .then(() => {
+    //             alert('Message submitted 👍');
+    //         })
+    //         .catch((error) => {
+    //             alert(error.message);
+    //         });
+    // };
     return (
         <Wrapper>
-            <MainCta onClick={testFirebase}>{mainCta}</MainCta>
+            <Link to="/create"><MainCta>{mainCta}</MainCta></Link>
             {showSecondary && <SecondaryCta>{secondaryCta}</SecondaryCta>}
         </Wrapper>
     )
