@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from "@emotion/styled";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../firebase/config"
 
 const Wrapper = styled("div")`
     display: flex;
@@ -53,9 +55,21 @@ const SecondaryCta = styled("a")`
 
 
 export default function DoubleCta({ mainCta, secondaryCta, showSecondary = true }) {
+    const testFirebase = () => {
+
+        addDoc(collection(db, "test-form-submission"), {
+            stringField: "This is another test"
+        })
+            .then(() => {
+                alert('Message submitted 👍');
+            })
+            .catch((error) => {
+                alert(error.message);
+            });
+    };
     return (
         <Wrapper>
-            <MainCta>{mainCta}</MainCta>
+            <MainCta onClick={testFirebase}>{mainCta}</MainCta>
             {showSecondary && <SecondaryCta>{secondaryCta}</SecondaryCta>}
         </Wrapper>
     )
