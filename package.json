@@ -16,6 +16,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "firebase": "^9.14.0",
     "gatsby": "^5.2.0",
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-emotion": "^8.2.0",
