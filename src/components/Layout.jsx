@@ -1,6 +1,6 @@
 import * as React from "react"
 import styled from "@emotion/styled";
-import "../styles/global.css"
+import "../Styles/global.css"
 import NavBar from "./NavBar";
 import Sidebar from './Sidebar';
 import { StateMachineProvider, createStore } from "little-state-machine";
