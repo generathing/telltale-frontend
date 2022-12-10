@@ -8,11 +8,12 @@ const Wrapper = styled("div")`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: ${(props) => props.pb};
 `
 
 const UploadArea = styled("button")`
     width: 70vw;
-    height: 350px;
+    height: 250px;
     border-radius: 20px;
     border: 2px dashed black;
     margin: 0 auto;
@@ -55,14 +56,14 @@ export default function ImageUpload() {
     };
 
     return (
-        <Wrapper>
+        <Wrapper pb="50px">
             <ImageUploading
                 multiple
                 value={images}
                 onChange={onChange}
                 maxNumber={maxNumber}
                 dataURLKey="data_url"
-                acceptType={["jpg", "jpeg"]}>
+                acceptType={["jpg", "jpeg", "png", "webp"]}>
                 {({
                     imageList,
                     onImageUpload,
