@@ -28,14 +28,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "steps",
-        "path": `${__dirname}/steps`
-      },
-      __key: "steps"
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         "name": "assets",
         "path": `${__dirname}/static/assets`
       },
