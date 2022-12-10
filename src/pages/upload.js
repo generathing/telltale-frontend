@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/Layout"
 import styled from "@emotion/styled";
 import ImageUpload from "../components/ImageUpload";
+import { useStateMachine } from "little-state-machine";
 
 const Heading = styled("h1")`
   padding-top: 7rem;

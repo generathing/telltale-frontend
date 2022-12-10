@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import ImageUploading from "react-images-uploading";
 import styled from "@emotion/styled";
 import { PrimaryButton } from "./FormComponents"
+import { useStateMachine } from "little-state-machine";
+import updateAction from "../update/updateAction";
+import { navigate } from "gatsby"
 
 const Wrapper = styled("div")`
     display: flex;
@@ -50,9 +53,14 @@ export default function ImageUpload() {
     const [images, setImages] = React.useState([]);
     const maxNumber = 69;
     const onChange = (imageList, addUpdateIndex) => {
-        // data for submit
-        console.log(imageList, addUpdateIndex);
         setImages(imageList);
+    };
+
+    const { actions, state } = useStateMachine({ updateAction });
+    const onSubmit = () => {
+        const data = { images: images }
+        actions.updateAction(data);
+        navigate("/create")
     };
 
     return (
@@ -77,8 +85,7 @@ export default function ImageUpload() {
                         <UploadArea
                             style={isDragging ? { color: "red" } : null}
                             onClick={onImageUpload}
-                            {...dragProps}
-                        >
+                            {...dragProps} >
                             Click or Drop here
                         </UploadArea>
                         &nbsp;
@@ -94,7 +101,7 @@ export default function ImageUpload() {
                     </Wrapper>
                 )}
             </ImageUploading>
-            <PrimaryButton onClick={() => console.log(images)}>Next</PrimaryButton>
+            <PrimaryButton type="submit" onClick={onSubmit}>Next</PrimaryButton>
         </Wrapper>
     );
 }
