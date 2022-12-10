@@ -33,7 +33,6 @@ const TextContainer = styled('div')`
 	padding: 1rem;
 	height: 100%;
 	p {
-		font-family: 'Poppins', sans-serif;
 		font-size: 1rem;
 		white-space: pre-line;
 		padding: 0 15px;
