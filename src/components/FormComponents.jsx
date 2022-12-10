@@ -57,9 +57,13 @@ const ErrorMessage = styled("span")`
 `
 
 const Submit = styled("input")`
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     border: 3px solid black;
-    padding: 1rem 4rem;
+    padding: 0 100px;
+    max-width: 300px;
+    text-align: center;
+    font-weight: 800;
     margin: 0;
     text-decoration: none;
     border-radius: 15px;
@@ -89,10 +93,14 @@ const Submit = styled("input")`
     }  
 
 `
-const ForwardButton = styled("button")`
-    display: inline-block;
+const PrimaryButton = styled("button")`
+    display: inline-flex;
+    align-items: center;
     border: 3px solid black;
-    padding: 1rem 4rem;
+    padding: 0 100px;
+    max-width: 300px;
+    text-align: center;
+    font-weight: 800;
     margin: 0;
     text-decoration: none;
     border-radius: 15px;
@@ -184,4 +192,4 @@ const ToggleLabel = styled("label")`
 
 
 
-export { PlainInput, Form, Label, Wrapper, FormControl, InputsArea, ErrorMessage, Submit, ForwardButton, ToggleInput }
+export { PlainInput, Form, Label, Wrapper, FormControl, InputsArea, ErrorMessage, Submit, PrimaryButton, ToggleInput }

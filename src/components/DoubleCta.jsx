@@ -57,18 +57,18 @@ const SecondaryCta = styled("a")`
 
 
 export default function DoubleCta({ mainCta, secondaryCta, showSecondary = true }) {
-    // const testFirebase = () => {
+    const testFirebase = () => {
 
-    //     addDoc(collection(db, "test-form-submission"), {
-    //         stringField: "This is anothertest"
-    //     })
-    //         .then(() => {
-    //             alert('Message submitted 👍');
-    //         })
-    //         .catch((error) => {
-    //             alert(error.message);
-    //         });
-    // };
+        addDoc(collection(db, "test-form-submission"), {
+            stringField: "This is anothertest"
+        })
+            .then(() => {
+                alert('Message submitted 👍');
+            })
+            .catch((error) => {
+                alert(error.message);
+            });
+    };
     return (
         <Wrapper>
             <Link to="/create"><MainCta>{mainCta}</MainCta></Link>

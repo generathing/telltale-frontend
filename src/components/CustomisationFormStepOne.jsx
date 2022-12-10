@@ -43,7 +43,7 @@ export default function CustomisationFormStepOne() {
 
 
 
-                <FormComponents.ForwardButton type="submit" >Next</FormComponents.ForwardButton>
+                <FormComponents.PrimaryButton type="submit" >Next</FormComponents.PrimaryButton>
 
             </FormComponents.Form>
         </FormComponents.Wrapper>
