@@ -1,46 +1,46 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import { useStaticQuery, graphql } from 'gatsby'
+import * as React from "react"
+import styled from "@emotion/styled"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Wrapper = styled('div')`
+const Wrapper = styled("div")`
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
 	width: 100%;
 `
-const Step = styled('div')`
+const Step = styled("div")`
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 	padding: 0.5rem;
 	@media (min-width: 576px) {
-		flex-direction: ${props => (props.index % 2 === 0 ? 'row' : 'row-reverse')};
+		flex-direction: ${props => (props.index % 2 === 0 ? "row" : "row-reverse")};
 		justify-content: space-around;
 		align-items: center;
 		gap: 6rem;
 	}
 `
-const StepContent = styled('div')`
+const StepContent = styled("div")`
 	display: flex;
 	flex-direction: column;
 	align-items: start;
 	gap: 1rem;
 `
-const StepTitle = styled('h2')`
+const StepTitle = styled("h2")`
 	padding: 0;
 	font-size: 2rem;
 	font-weight: 600;
 `
-const StepDescription = styled('p')`
+const StepDescription = styled("p")`
 	padding-left: 0.5rem;
 	font-size: 1.2rem;
 	max-width: 500px;
 `
-const StepImage = styled('div')`
+const StepImage = styled("div")`
 	width: 100%;
 	aspect-ratio: 2/1;
 	border-radius: 20px;
-	background-image: url('${props => props.thumbnail}');
+	background-image: url("${props => props.thumbnail}");
 	background-size: cover;
 	background-position: center;
 	@media (min-width: 576px) {

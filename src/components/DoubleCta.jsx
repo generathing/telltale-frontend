@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from '@emotion/styled'
-import { collection, addDoc } from 'firebase/firestore'
-import { db } from '../firebase/config'
-import { Link } from 'gatsby'
+import React from "react"
+import styled from "@emotion/styled"
+import { collection, addDoc } from "firebase/firestore"
+import { db } from "../firebase/config"
+import { Link } from "gatsby"
 
-const Wrapper = styled('div')`
+const Wrapper = styled("div")`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -14,7 +14,7 @@ const Wrapper = styled('div')`
 	max-width: 500px;
 `
 
-const MainCta = styled('button')`
+const MainCta = styled("button")`
 	@media (min-width: 576px) {
 		padding: 0.5rem 5rem;
 	}
@@ -51,7 +51,7 @@ const MainCta = styled('button')`
 	}
 `
 
-const SecondaryCta = styled('a')`
+const SecondaryCta = styled("a")`
 	margin-top: 0.5rem;
 	text-decoration: underline wavy black;
 `

@@ -1,8 +1,8 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import { useStaticQuery, graphql } from 'gatsby'
+import * as React from "react"
+import styled from "@emotion/styled"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Wrapper = styled('div')`
+const Wrapper = styled("div")`
 	display: flex;
 	width: 100%;
 	gap: 1rem;
@@ -11,7 +11,7 @@ const Wrapper = styled('div')`
 	margin-top: 2rem;
 `
 
-const Card = styled('div')`
+const Card = styled("div")`
 	width: 80vw;
 	aspect-ratio: 1/1;
 	border-radius: 20px;
@@ -27,7 +27,7 @@ const Card = styled('div')`
 	}
 `
 
-const TextContainer = styled('div')`
+const TextContainer = styled("div")`
 	overflow: hidden;
 	position: relative;
 	padding: 1rem;
@@ -38,7 +38,7 @@ const TextContainer = styled('div')`
 		padding: 0 15px;
 	}
 `
-const TextOverlay = styled('div')`
+const TextOverlay = styled("div")`
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -49,7 +49,7 @@ const TextOverlay = styled('div')`
 		rgba(254, 248, 234, 0) 50%
 	);
 `
-const HeroBlock = styled('div')`
+const HeroBlock = styled("div")`
 	display: flex;
 `
 

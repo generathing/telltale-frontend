@@ -1,4 +1,4 @@
-require('dotenv').config({
+require("dotenv").config({
 	path: `.env.${process.env.NODE_ENV}`,
 })
 /**
@@ -10,39 +10,39 @@ module.exports = {
 		siteUrl: `https://www.yourdomain.tld`,
 	},
 	plugins: [
-		'gatsby-plugin-emotion',
-		'gatsby-plugin-netlify-cms',
-		'gatsby-plugin-image',
-		'gatsby-plugin-sharp',
-		'gatsby-transformer-sharp',
+		"gatsby-plugin-emotion",
+		"gatsby-plugin-netlify-cms",
+		"gatsby-plugin-image",
+		"gatsby-plugin-sharp",
+		"gatsby-transformer-sharp",
 		{
-			resolve: 'gatsby-source-filesystem',
+			resolve: "gatsby-source-filesystem",
 			options: {
-				name: 'images',
+				name: "images",
 				path: `${__dirname}/src/images`,
 			},
-			__key: 'images',
+			__key: "images",
 		},
 		{
-			resolve: 'gatsby-source-filesystem',
+			resolve: "gatsby-source-filesystem",
 			options: {
-				name: 'hero',
+				name: "hero",
 				path: `${__dirname}/hero-story`,
 			},
-			__key: 'hero-story',
+			__key: "hero-story",
 		},
 		{
-			resolve: 'gatsby-source-filesystem',
+			resolve: "gatsby-source-filesystem",
 			options: {
-				name: 'steps',
+				name: "steps",
 				path: `${__dirname}/steps`,
 			},
-			__key: 'steps',
+			__key: "steps",
 		},
 		{
-			resolve: 'gatsby-source-filesystem',
+			resolve: "gatsby-source-filesystem",
 			options: {
-				name: 'assets',
+				name: "assets",
 				path: `${__dirname}/static/assets`,
 			},
 		},
