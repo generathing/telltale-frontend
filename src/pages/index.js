@@ -63,8 +63,6 @@ const Heading = styled('h1')`
 	font-size: 30px;
 `
 
-const SmallHeading = styled('h3')``
-
 const FeaturesList = styled('ul')`
 	padding-inline: 2rem;
 	@media (min-width: 420px) {
