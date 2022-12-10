@@ -56,7 +56,7 @@ export default function NavBar() {
             <NavItemsWrapper>
                 {navItems.map((item) => {
                     return (
-                        <NavItem>
+                        <NavItem key={item}>
                             <a href={item[1]}>
                                 {item[0]}
                             </a>

@@ -1,8 +1,9 @@
 import * as React from "react"
 import styled from "@emotion/styled";
-import "../Styles/global.css"
+import "../styles/global.css"
 import NavBar from "./NavBar";
 import Sidebar from './Sidebar';
+import { StateMachineProvider, createStore } from "little-state-machine";
 
 const BackgroundWrapper = styled("div")`
     background-color: #F59124;
@@ -10,17 +11,18 @@ const BackgroundWrapper = styled("div")`
     min-height: 100vh;
 `
 
-
 const Layout = ({ children }) => {
     return (
-        <BackgroundWrapper id="outer-container">
-            <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
-            <div id="page-wrap">
-                <NavBar />
+        <StateMachineProvider>
+            <BackgroundWrapper id="outer-container">
+                <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+                <div id="page-wrap">
+                    <NavBar />
 
-                {children}
-            </div>
-        </BackgroundWrapper>
+                    {children}
+                </div>
+            </BackgroundWrapper>
+        </StateMachineProvider>
     )
 }
 

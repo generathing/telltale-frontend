@@ -1,7 +1,7 @@
 import * as React from "react"
 import Layout from "../components/Layout"
 import styled from "@emotion/styled";
-import CustomisationFormStepOne from "../components/CustomisationFormStepOne";
+import FormReview from "../components/FormReview"
 
 const Heading = styled("h1")`
   padding-top: 7rem;
@@ -12,7 +12,7 @@ const Heading = styled("h1")`
 const IndexPage = () => {
     return (
         <Layout>
-            <CustomisationFormStepOne />
+            <FormReview />
         </Layout>
     )
 }

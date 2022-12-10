@@ -80,12 +80,11 @@ export default function HeroStoryPreview() {
     `)
 
     const nodes = data.allFile.edges
-    console.log(nodes)
     const listItems = nodes.map((node, index) => {
         const frontmatter = node.node.childrenMarkdownRemark[0].frontmatter;
         const content = node.node.childrenMarkdownRemark[0].internal.content;
         return (
-            <HeroBlock>
+            <HeroBlock key={frontmatter.title}>
                 <Column>
                     <img src={frontmatter.thumbnail} alt={frontmatter.title} />
                 </Column>
