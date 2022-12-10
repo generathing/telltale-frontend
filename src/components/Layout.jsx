@@ -3,10 +3,10 @@ import styled from '@emotion/styled'
 import '../Styles/global.css'
 import NavBar from './NavBar'
 import Sidebar from './Sidebar'
-import { StateMachineProvider } from 'little-state-machine'
+import { StateMachineProvider, createStore } from 'little-state-machine'
 
 const BackgroundWrapper = styled('div')`
-	background-color: #f8a144;
+	background-color: #f59124;
 	min-width: 100vw;
 	min-height: 100vh;
 `
