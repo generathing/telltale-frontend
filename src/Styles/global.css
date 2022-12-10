@@ -177,3 +177,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+/* Image upload styling */
+.image-item {
+  display: flex;
+  margin: 10px 0;
+}
+
+.image-item__btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+button {
+  height: 40px;
+}

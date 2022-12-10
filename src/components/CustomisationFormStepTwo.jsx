@@ -9,7 +9,6 @@ import styled from "@emotion/styled";
 const ToggleWrapper = styled("div")`
     display: flex;
     align-items: center;
-
 `
 
 const CheckedToggleDescription = styled("span")`
@@ -47,7 +46,7 @@ const ToggleLabel = styled("label")`
     }
 `
 export default function CustomisationFormStepOne() {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const { actions, state } = useStateMachine({ updateAction });
     const [toggleStatus, setToggleStatus] = useState(false)
     const onSubmit = (data) => {
@@ -78,7 +77,7 @@ export default function CustomisationFormStepOne() {
                     </FormComponents.FormControl>
                 </FormComponents.InputsArea>
 
-                <FormComponents.ForwardButton type="submit">Next</FormComponents.ForwardButton>
+                <FormComponents.PrimaryButton type="submit">Next</FormComponents.PrimaryButton>
 
             </FormComponents.Form>
         </FormComponents.Wrapper >
